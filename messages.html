@@ -1,76 +1,154 @@
 <!-- messages.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unsent Messages~ Nikita</title>
     <style>
-        /* Reset & Base */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background: #f9f9f9; color: #333; }
+      /* Reset & Base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background: #f9f9f9;
+        color: #333;
+      }
 
-        /* Header */
-        header { background: linear-gradient(90deg, #ff9a9e, #fad0c4); padding: 2rem; text-align: center; color: white; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+      /* Header */
+      header {
+        background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+        padding: 2rem;
+        text-align: center;
+        color: white;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
 
-        /* Messages Display Section */
-        .messages { max-width: 900px; margin: 2rem auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-        .message-card { background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 1rem; }
-        .message-card img { max-width: 100%; border-radius: 10px; }
-        .message-card .sender { font-weight: bold; color: #555; }
-        .message-card .text { font-size: 1rem; line-height: 1.4; }
+      /* Messages Display Section */
+      .messages {
+        max-width: 900px;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .message-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .message-card img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      .message-card .sender {
+        font-weight: bold;
+        color: #555;
+      }
+      .message-card .text {
+        font-size: 1rem;
+        line-height: 1.4;
+      }
 
-        /* Logout Button */
-        .logout-btn { display: block; max-width: 100px; margin: 1rem auto; padding: 0.8rem; text-align: center; background: #ff6b81; color: white; border-radius: 8px; cursor: pointer; transition: 0.3s; }
-        .logout-btn:hover { background: #ff4757; }
+      /* Logout Button */
+      .logout-btn {
+        display: block;
+        max-width: 100px;
+        margin: 1rem auto;
+        padding: 0.8rem;
+        text-align: center;
+        background: #ff6b81;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .logout-btn:hover {
+        background: #ff4757;
+      }
 
-        /* Responsive */
-        @media(max-width: 600px){ .messages { grid-template-columns: 1fr; } }
+      /* Responsive */
+      @media (max-width: 600px) {
+        .messages {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      body {
+        background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <h1>I hope i could send u the moment i typed</h1>
-        <div class="logout-btn" onclick="logout()">Logout</div>
+      <h1>I hope i could send u the moment i typed</h1>
+      <div class="logout-btn" onclick="logout()">Logout</div>
     </header>
 
     <!-- Messages Section -->
     <section class="messages">
-        <div class="message-card">
-            <img src="img1.jpg" alt="Message Image 1">
-            <div class="sender">Nikita</div>
-            <div class="text">I wish Distance was never a problem for us</div>
+      <div class="message-card">
+        <img src="img1.jpg" alt="Message Image 1" />
+        <div class="sender">Nikita</div>
+        <div class="text">I wish Distance was never a problem for us</div>
+      </div>
+      <div class="message-card">
+        <img src="img2.jpg" alt="Message Image 2" />
+        <div class="sender">Nikita</div>
+        <div class="text">
+          I wanted to tell you so much but u are differnt and so m i
         </div>
-        <div class="message-card">
-            <img src="img2.jpg" alt="Message Image 2">
-            <div class="sender">Nikita</div>
-            <div class="text">I wanted to tell you so much but u are differnt and so m i</div>
+      </div>
+      <div class="message-card">
+        <img src="img3.jpg" alt="Message Image 3" />
+        <div class="sender">Nikita</div>
+        <div class="text">i thing i love you a lot</div>
+      </div>
+      <div class="message-card">
+        <img src="img4.jpg" alt="Message Image 4" />
+        <div class="sender"></div>
+        <div class="text">
+          I am scared to make you uncomfortable with all the affection i want to
+          give you
         </div>
-        <div class="message-card">
-            <img src="img3.jpg" alt="Message Image 3">
-            <div class="sender">Nikita</div>
-            <div class="text"> i thing i love you a lot</div>
-        </div>
-        <div class="message-card">
-            <img src="img4.jpg" alt="Message Image 4">
-            <div class="sender"></div>
-            <div class="text">I am scared to make you uncomfortable with all the affection i want to give you</div>
-        </div>
+      </div>
     </section>
 
     <script>
-        // Check login status
-        if(sessionStorage.getItem("loggedIn") !== "true"){
-            window.location.href = "login.html";
-        }
+      // Check login status
+      if (sessionStorage.getItem("loggedIn") !== "true") {
+        window.location.href = "login.html";
+      }
 
-        function logout(){
-            sessionStorage.removeItem("loggedIn");
-            window.location.href = "index.html";
-        }
+      function logout() {
+        sessionStorage.removeItem("loggedIn");
+        window.location.href = "index.html";
+      }
     </script>
-</body>
+  </body>
 </html>
