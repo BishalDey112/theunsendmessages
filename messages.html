@@ -112,10 +112,65 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <h1>I hope i could send u the moment i typed</h1>
-      <div class="logout-btn" onclick="logout()">Logout</div>
+    <header
+      style="
+        position: relative;
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+        color: white;
+      "
+    >
+      <!-- Animated Floating Heading -->
+      <h1
+        id="animatedHeading"
+        style="
+          font-size: 2.5rem;
+          font-weight: bold;
+          color: white;
+          display: inline-block;
+          position: relative;
+        "
+      >
+        I hope I could send u the moment I typed
+      </h1>
+
+      <!-- Logout Button -->
+      <div
+        class="logout-btn"
+        onclick="logout()"
+        style="
+          display: inline-block;
+          margin-left: 20px;
+          padding: 0.5rem 1rem;
+          background: #ff6b81;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.3s;
+        "
+        onmouseover="this.style.background='#ff4757';"
+        onmouseout="this.style.background='#ff6b81';"
+      >
+        Logout
+      </div>
     </header>
+
+    <script>
+      // Floating heading animation
+      const heading = document.getElementById("animatedHeading");
+      let up = true;
+      setInterval(() => {
+        if (up) {
+          heading.style.transform = "translateY(-10px)";
+          heading.style.opacity = "1";
+        } else {
+          heading.style.transform = "translateY(20px)";
+          heading.style.opacity = "0";
+        }
+        up = !up;
+      }, 2500);
+    </script>
 
     <!-- Messages Section -->
     <section class="messages">
